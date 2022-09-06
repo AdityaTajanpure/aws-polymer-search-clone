@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+.card {
+  background-color: white;
+  padding: 0.7rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  cursor: alias;
+}
+.shareCopy {
+  color: grey !important;
+  font-size: 0.8rem !important;
+}
+.alertBox {
+  position: absolute;
+  width: 10rem;
+  height: 2rem;
+}
+.insideCard {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 2rem;
+}
+.insideCard1 {
+  display: flex;
+  gap: 2rem;
+}
+.modal-90w {
+  min-width: 80%;
+}
+
+.custom-modal-style {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.modal-header {
+  background-color: rgb(172, 170, 170);
+}
+
+.modalBody {
+  border: 1px solid rgb(221, 218, 218);
+  border-radius: 10px;
+}
+.modalBody1 {
+  position: relative;
+}
+.modalHeader {
+  text-align: center;
+  padding: 2px;
+  width: 12rem;
+  border: 1px solid rgb(221, 218, 218);
+  border-radius: 10px;
+  position: absolute !important;
+  top: -1.9rem;
+  left: 1rem;
+  background-color: white;
+  z-index: 1;
+}
+
+.navbarContainer {
+  background-color: white;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 2;
+}
+.navTitle {
+  font-weight: 150;
+}
+.navItem {
+  color: black;
+  text-decoration: none;
+}
+.nav-item {
+  display: flex;
+  justify-content: center;
+}
+.nav-link {
+  display: flex !important;
+  text-decoration: none;
+  justify-content: center !important;
+  align-items: center;
+}
+.navItem:hover {
+  text-decoration: none;
+  border-bottom: 3px solid orange;
+  color: orange !important;
+}
+.setItem {
+  color: orange !important;
+  border-bottom: 3px solid orange;
+}
+.bulbIcon {
+  color: rgb(240, 160, 11);
+}
+.reloadIcon {
+  color: blue;
+}
+
+.polymer {
+  background-color: rgb(232, 228, 247);
+  color: black !important;
+  border-radius: 10px;
+}
+.dropdown {
+  margin: 0 10px;
+  border: 1.5px solid blue;
+  border-radius: 10px;
+}
+.dropdown-menu {
+  position: relative;
+  left: -80px;
+}
+
+#searchId,
+#chartId {
+  position: relative;
+}
+
+#searchTooltip {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  top: 58px;
+  left: -30px;
+  padding: 8px;
+  border: 1px solid rgb(216, 216, 216);
+}
+#chartTooltip {
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  top: 58px;
+  left: -50px;
+  padding: 8px;
+  border: 1px solid rgb(216, 216, 216);
+  background-color: white;
+}
+
+@media (max-width: 1020px) {
+  #searchTooltip,
+  #chartTooltip {
+    display: none !important;
+  }
+}
+
+.listTagContainer {
+  position: absolute;
+  /* background-color: red; */
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 10px;
+  width: 30rem;
+  top: 0rem;
+  left: 13.4rem;
+}
+.tagsTop {
+  width: 100%;
+  height: 0.4rem;
+  background-color: #0029e6;
+  background-image: linear-gradient(
+    43deg,
+    #0029e6 0%,
+    #d21618 46%,
+    #fff170 100%
+  );
+}
+.tagSearch {
+  padding: 5px;
+  background-color: rgb(219, 216, 216);
+}
+#name {
+  border: none;
+}
+label {
+  background-color: white;
+  font-size: 1.068rem;
+}
+.tagBox {
+  padding: 1rem;
+  background-color: white;
+}
+.tagItem {
+  display: inline-block;
+  background-color: rgb(202, 233, 243);
+  border-radius: 3px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+.tagItemHover {
+  background-color: rgb(70, 199, 241);
+}
+.tagItemNumber {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.sidebarContainer {
+  display: flex;
+  position: sticky !important;
+  top: 4rem !important;
+  align-self: flex-start;
+  z-index: 1 !important;
+}
+.tag {
+  position: relative;
+  top: -10px;
+  font-size: 0.85rem;
+}
+.sideScroll {
+  width: 15rem;
+  height: 91vh;
+  border-right: 1px solid rgb(216, 216, 216);
+  padding: 0.8rem;
+}
+.scrollHeader {
+  font-size: 0.8rem;
+  color: grey;
+}
+.list {
+  padding: 0.3rem;
+  border: 1px solid rgb(201, 195, 195);
+  border-radius: 0.75rem;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  gap: 0.3rem;
+}
+.listName {
+  margin-left: 2rem;
+  width: 7rem;
+}
+.listNumber {
+  padding: 2.5px;
+  background-color: rgba(244, 226, 242, 255);
+  border-radius: 5px;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+.listNameActive {
+  width: 0.5rem;
+  background-color: hotpink;
+}
+.listNumberActive {
+  background-color: hotpink;
+}
+.scrollList {
+  position: relative;
+}
+.scrollListTags {
+  position: absolute;
+  background-color: red;
+  width: 5rem;
+  height: 5rem;
+  top: 0rem;
+  left: 13rem;
+}
+
+.chart {
+  width: 70vw;
+  height: 70vh;
+}
+
+.outerContainer {
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+  background-color: rgb(247, 247, 247);
+}
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.searchBox {
+  border-radius: 10px !important;
+  width: 18rem !important;
+}
+.tagBar {
+  height: 2.5rem;
+  background-color: rgb(236, 234, 234);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 2px #888888;
+  padding: 10px;
+}
+.tagBarItem {
+  display: inline;
+  background-color: rgb(175, 247, 175);
+  margin-left: 0.4rem;
+  padding: 3px;
+  border-radius: 5px;
+}
+.countBar {
+  border: 0.5px solid rgb(230, 226, 226);
+  border-radius: 5px;
+  background-color: white;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  margin: 0px 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.outerContainer {
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+  background-color: rgb(247, 247, 247);
+}
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.searchBox {
+  border-radius: 10px !important;
+  width: 18rem !important;
+}
+.tagBar {
+  height: 2.5rem;
+  background-color: rgb(236, 234, 234);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 2px #888888;
+  padding: 10px;
+}
+.tagBarItem {
+  display: inline;
+  background-color: rgb(175, 247, 175);
+  margin-left: 0.4rem;
+  padding: 3px;
+  border-radius: 5px;
+}
+.countBar {
+  border: 0.5px solid rgb(230, 226, 226);
+  border-radius: 5px;
+  background-color: white;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  margin: 0px 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
