@@ -6,7 +6,7 @@ class MongoConnection {
     try {
       this.connection = new MongoClient(process.env.MONGO_URI);
       this.db = this.connection.db(process.env.DB_NAME);
-      this.connection
+      await this.connection
         .connect()
         .then((value) => {
           this.repo = this.db.collection("repo");
