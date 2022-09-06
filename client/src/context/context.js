@@ -19,12 +19,7 @@ export function DataProvider({ children }) {
   const fetchData = async (selectTags) => {
     try {
       dispatch({ type: CALL_API });
-      let response = await axios.get(
-        process.env.NODE_ENV === "production"
-          ? "https://aws-polymer-search.herokuapp.com/repos"
-          : "http://localhost:5000/repos",
-        { params: selectTags }
-      );
+      let response = await axios.get("/repos", { params: selectTags });
       dispatch({ type: SUCCESS, payload: response.data });
     } catch (err) {
       dispatch({ type: ERROR });
