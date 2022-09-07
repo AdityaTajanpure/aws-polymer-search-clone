@@ -19,7 +19,7 @@ export function DataProvider({ children }) {
   const fetchData = async (selectTags) => {
     try {
       dispatch({ type: CALL_API });
-      let response = await axios.get("/repos", { params: selectTags });
+      let response = await axios.get("/repo/repos", { params: selectTags });
       dispatch({ type: SUCCESS, payload: response.data });
     } catch (err) {
       dispatch({ type: ERROR });

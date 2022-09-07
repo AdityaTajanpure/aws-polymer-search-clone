@@ -15,19 +15,19 @@ app.listen(PORT, () => {
 });
 
 (async () => {
+  //Serve static assets in production
+  if (process.env.NODE_ENV === "production") {
+    //Set a static folder
+    app.use(express.static("client/build"));
+
+    app.get("*", (_, res) => {
+      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    });
+  }
+
   //Created a singleton for later access
   await MongoConnection.connect();
 
   //Routes
-  app.use("/", require("./routes/repo"));
+  app.use("/repo", require("./routes/repo"));
 })();
-
-//Serve static assets in production
-if (process.env.NODE_ENV === "production") {
-  //Set a static folder
-  app.use(express.static("client/build"));
-
-  app.get("*", (_, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
