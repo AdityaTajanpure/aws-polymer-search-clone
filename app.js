@@ -14,20 +14,17 @@ app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
 
-(async () => {
-  //Serve static assets in production
-  if (process.env.NODE_ENV === "production") {
-    //Set a static folder
-    app.use(express.static("client/build"));
+MongoConnection.connect();
 
-    app.get("*", (_, res) => {
-      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-    });
-  }
+//Routes
+app.use("/repo", require("./routes/repo"));
 
-  //Created a singleton for later access
-  await MongoConnection.connect();
+//Serve static assets in production
+if (process.env.NODE_ENV === "production") {
+  //Set a static folder
+  app.use(express.static("client/build"));
 
-  //Routes
-  app.use("/repo", require("./routes/repo"));
-})();
+  app.get("*", (_, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
