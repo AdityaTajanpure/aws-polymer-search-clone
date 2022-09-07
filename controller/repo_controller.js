@@ -12,7 +12,7 @@ const getTags = async (_, res) => {
 
 const getRepo = async (req, res) => {
   if (Object.keys(req.query).length === 0) {
-    let repos = await (await mongo.repo.find().toArray()).slice(0, 50);
+    let repos = await (await mongo.repo.find().toArray()).slice(0, 30);
     res.status(200).send(repos);
   } else {
     var queryMap = {};
